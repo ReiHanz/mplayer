@@ -1,0 +1,379 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Layout for the left and right sections */
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin: 120px auto 20px auto; /* Add margin-top to account for fixed header */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Left section (upload form and favorites) */
+.left-section {
+    width: 30%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-section h2 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+/* Right section (music list) */
+.right-section {
+    width: 65%;
+    padding: 20px;
+}
+
+.right-section h2 {
+    margin-top: 0;
+}
+
+/* Music Upload Form */
+form {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"], input[type="file"] {
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Music List */
+.music-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.music-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.music-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.music-item audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.music-item button {
+    margin-left: 10px;
+    background-color: #007bff;
+}
+
+.music-item button[name="delete"] {
+    background-color: #dc3545;
+}
+
+.music-item button:hover {
+    opacity: 0.9;
+}
+
+/* Favorites Section in the Left Column */
+.favorite-list {
+    margin-top: 30px;
+}
+
+.favorite-list h2 {
+    color: #007bff;
+}
+
+/* Footer */
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        margin-top: 150px; /* Adjust for fixed header */
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .music-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .music-item audio {
+        margin-top: 10px;
+    }
+
+    button {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+/* Profile Container */
+.profile-container {
+    width: 50%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.profile-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-container form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.profile-container form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.profile-container form button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-container form button:hover {
+    background-color: #555;
+}
+
+.success-message {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Chat Box Styling */
+/* Styling untuk menu live chat */
+.live-chat {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f4f6f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Box utama chat */
+#chat-box {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    padding: 10px;
+    background-color: #f7f7f7; /* Ganti warna background untuk lebih kontras */
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease; /* Transisi halus saat mengubah warna */
+}
+
+#chat-box:hover {
+    background-color: #f0f0f0; /* Efek saat hover di chat box */
+}
+
+#chat-messages {
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* Agar pesan tersusun vertikal */
+}
+
+/* Animasi untuk pesan baru */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pesan chat umum */
+.chat-message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.4;
+    word-wrap: break-word;
+    animation: fadeIn 0.3s ease-out; /* Animasi masuk pesan */
+    max-width: 80%; /* Batasi lebar pesan */
+}
+
+/* Pesan pengguna */
+.chat-message.user {
+    background-color: #e2f7e2;
+    color: #333;
+    align-self: flex-end; /* Posisi di kanan */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Pesan bot */
+.chat-message.bot {
+    background-color: #f0f0f0;
+    color: #333;
+    align-self: flex-start; /* Posisi di kiri */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Input chat dan tombol kirim */
+#chat-form {
+    display: flex;
+    gap: 10px;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease; /* Transisi warna border */
+}
+
+#chat-input:focus {
+    border-color: #28a745; /* Ganti warna saat fokus */
+    outline: none;
+}
+
+#chat-form button {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#chat-form button:hover {
+    background-color: #218838;
+}
+
+/* Responsif untuk layar lebih kecil */
+@media (max-width: 600px) {
+    #chat-box {
+        height: 250px;
+    }
+    #chat-form {
+        flex-direction: column;
+    }
+    #chat-input {
+        margin-bottom: 10px;
+    }
+}
+
+
+
